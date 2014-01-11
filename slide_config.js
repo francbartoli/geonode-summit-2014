@@ -24,7 +24,6 @@ var SLIDE_CONFIG = {
   presenters: [{
     name: 'Tyler Garner',
     company: 'Geospatial Analyst and Web Developer<br>LMN Solutions',
-    gplus: 'http://plus.google.com/1234567890',
     twitter: '@garnertb',
     www: 'http://www.lmnsolutions.com',
     github: 'http://github.com/garnertb'

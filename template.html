@@ -88,6 +88,25 @@ URL: https://code.google.com/p/io-2012-slides
   </slide>
 
   <slide>
+      <hgroup>
+          <h2>ROGUE Components</h2>
+      </hgroup>
+      <article>
+          <img src="images/rogue_stack.png" style="float:right;"/>
+          <ul>
+              <li><b>Arbiter:</b> Native Android mobile application</li>
+              <li><b>GeoNode:</b> The user interface</li>
+              <li><b>Geoserver:</b> Web access to GIS data sources</li>
+              <li><b>GeoWebCache:</b> Caching and serving tiles</li>
+              <li><b>MapLoom:</b> Custom OL3 web mapping client used in GeoNode</li>
+              <li><b>PostGIS:</b> Stores geospatial data in a relational database</li>
+              <li><b>GeoGIT:</b> Distributed and versioned editing</li>
+          </ul>
+      </article>
+  </slide>
+  
+  
+  <slide>
     <hgroup>
       <h2>Distributed and Disconnected Editing</h2>
     </hgroup>
@@ -102,6 +121,58 @@ URL: https://code.google.com/p/io-2012-slides
         <li>Maintain provenance of data</li>
       </ul>
     </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>2014 GeoNode Wishlist</h2>
+      </hgroup>
+      <article class="smaller   ">
+          <ul>
+              <p>Core Enhancements</p>
+              <ul>
+                <li><b>Group Permissions:</b> Implement group permissions<span class="red">*</span></li>
+                <li>Abstract the GXP map configuration classes to make swapping out the mapping library and easier.</li>
+                <li>Formal GeoNode API</li>
+                <li><b>External Layers:</b> Model external layers and services as first-class citizens in GeoNode<span class="red">*</span></li>
+                <pre class="prettyprint" data-lang="python">
+                    {"source": {"ptype": "gxp_olsource"},
+                    "type":"OpenLayers.Layer.TMS",
+                    "group":None,
+                    "visibility": True,
+                    "args":[
+                        "HIU Tacloban Post Event",
+                        "http://hiu-maps.net/hot/",
+                        {
+                            "layername":["taclobancity-post"],
+                            "format":"png",
+                            "transparent":True,
+                        }
+                     ]
+                    }</pre>
+              </ul>
+          </ul>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>2014 GeoNode Wishlist (cont.)</h2>
+      </hgroup>
+      <article class="smaller   ">
+          <ul>
+              <p>Core Enhancements (cont.)</p>
+              <ul>
+                  <li>Allow external resources to be saved as documents.</li>
+                  <li>Client-side testing suite and larger test coverage.</li>
+              </ul>
+
+              <p>GeoNode plugins</p>
+              <ul>
+                  <li><b>Geospatial Issue Tracking:</b> Github-like issues with spatial bounds that are related to a map or layer in GeoNode<span class="red">*</span></li>
+              </ul>
+          </ul>
+      </article>
   </slide>
 
   <slide>
