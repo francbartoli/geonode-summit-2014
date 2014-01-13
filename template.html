@@ -46,8 +46,9 @@ URL: https://code.google.com/p/io-2012-slides
       <hgroup>
           <h2>About the JCTD</h2>
       </hgroup>
-      <article>
-          <h3>Members</h3>
+      <article class="smaller">
+          <p>JCTDs are DoD vehicles that introduce new operational concepts to maturing technologies to solve complex problems.</p>
+          <h3>A team effort, our partners:</h3>
           <img src="images/rogue_logo.png" style="height:250px; float: right;"/>
           <ul style="width:700px;">
               <li><b>Boundless & Community:</b> Open Source Transition</li>
@@ -72,18 +73,18 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
     <article>
         <blockquote>
-            The ROGUE JCTD is providing the capability for organizations to collaboratively develop geographic feature data and analysis with traditional and non-traditional partners
+            Allows organizations to collaboratively develop and analyze geospatial data with traditional and non-traditional partners
         </blockquote>
 
-        <br>
-        <h3>Problems</h3>
+        <h3>Traditional challenges in the HA/DR arena that ROGUE addresses</h3>
         <ul>
             <li>Wide range of partners, including military, inter-agency, NGOs, & nations</li>
             <li>Common situational awareness of the environment is critical</li>
             <li>Responding organizations both need, and can provide a great deal of information</li>
             <li>Partners must have direct access to the technology itself</li>
             <li>Partners are <span class="blue">distributed</span> and sometimes <span class="blue">disconnected</span></li>
-      </ul>
+        </ul>
+
     </article>
   </slide>
 
@@ -91,22 +92,84 @@ URL: https://code.google.com/p/io-2012-slides
       <hgroup>
           <h2>ROGUE Components</h2>
       </hgroup>
-      <article>
+      <article class="smaller">
           <img src="images/rogue_stack.png" style="float:right;"/>
+          <h3>Community components:</h3>
           <ul>
-              <li><b>Arbiter:</b> Native Android mobile application</li>
               <li><b>GeoNode:</b> The user interface</li>
               <li><b>Geoserver:</b> Web access to GIS data sources</li>
               <li><b>GeoWebCache:</b> Caching and serving tiles</li>
-              <li><b>MapLoom:</b> Custom OL3 web mapping client used in GeoNode</li>
               <li><b>PostGIS:</b> Stores geospatial data in a relational database</li>
-              <li><b>GeoGIT:</b> Distributed and versioned editing</li>
+
           </ul>
+          <h3>Custom components:</h3>
+          <ul>
+              <li><b>Arbiter:</b> Native Android mobile application</li>
+              <li><b>GeoGIT:</b> Distributed and versioned editing</li>
+              <li><b>ROGUE-GeoNode:</b> A lightweight GeoNode-project that overrides a handful of GeoNode templates and adds additional views.</li>
+              <li><b>MapLoom:</b> Custom OL3 web mapping client used in GeoNode</li>
+          </ul>
+
       </article>
   </slide>
-  
-  
+
   <slide>
+      <hgroup>
+          <h2>Arbiter</h2>
+      </hgroup>
+      <article>
+          <ul>
+              <li>Native Android App that supports data collection</li>
+              <li>User can create and edit feature geometry and attributes</li>
+              <li>Users can link media to features which get uploaded as documents in GeoNode <span class="red">*</span></li>
+              <li>Cache basemap tiles</li>
+              <li>Supports disconnected editing</li>
+          </ul>
+          <br/>
+          <br/>
+          <br/>
+          <h5><a href="https://github.com/ROGUE-JCTD/Arbiter-Android">View on Github</a></h5>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>GeoGit</h2>
+      </hgroup>
+      <article class="smaller">
+          <ul>
+              <li>Import feature data</li>
+              <li>Commit changes</li>
+              <li>Branch and merge</li>
+              <li>Supports most Git commands: <code>add, apply, blame, branch, checkout, cherry-pick, clean, clone, commit, config, conflicts, diff, fetch, format-patch, geojson, help, init, log, ls, merge, oracle, osm, pg, pull, push, rebase, remote, reset, revert, rm, show, shp, sl, sqlserver, squash, status, tag, version</code></li>
+          </ul>
+          <br/>
+          <br/>
+          <br/>
+          <h5><a href="https://github.com/ROGUE-JCTD/GeoGit/tree/SprintRelease">View on Github</a></h5>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>ROGUE-GeoNode</h2>
+      </hgroup>
+      <article class="smaller">
+          <ul>
+              <li>Import feature data</li>
+              <li>Commit changes</li>
+              <li>Branch and merge</li>
+              <li>Supports most Git commands: <code>add, apply, blame, branch, checkout, cherry-pick, clean, clone, commit, config, conflicts, diff, fetch, format-patch, geojson, help, init, log, ls, merge, oracle, osm, pg, pull, push, rebase, remote, reset, revert, rm, show, shp, sl, sqlserver, squash, status, tag, version</code></li>
+          </ul>
+          <br/>
+          <br/>
+          <br/>
+          <h5><a href="https://github.com/ROGUE-JCTD/GeoGit/tree/SprintRelease">View on Github</a></h5>
+      </article>
+  </slide>
+
+
+  <!--<slide>
     <hgroup>
       <h2>Distributed and Disconnected Editing</h2>
     </hgroup>
@@ -121,18 +184,18 @@ URL: https://code.google.com/p/io-2012-slides
         <li>Maintain provenance of data</li>
       </ul>
     </article>
-  </slide>
+  </slide>-->
 
   <slide>
       <hgroup>
           <h2>2014 GeoNode Wishlist</h2>
       </hgroup>
-      <article class="smaller   ">
+      <article class="smaller">
           <ul>
               <p>Core Enhancements</p>
               <ul>
                 <li><b>Group Permissions:</b> Implement group permissions<span class="red">*</span></li>
-                <li>Abstract the GXP map configuration classes to make swapping out the mapping library and easier.</li>
+                <li>Abstract the GXP map configuration classes to make swapping out the mapping library easier.</li>
                 <li>Formal GeoNode API</li>
                 <li><b>External Layers:</b> Model external layers and services as first-class citizens in GeoNode<span class="red">*</span></li>
                 <pre class="prettyprint" data-lang="python">
@@ -165,6 +228,7 @@ URL: https://code.google.com/p/io-2012-slides
               <ul>
                   <li>Allow external resources to be saved as documents.</li>
                   <li>Client-side testing suite and larger test coverage.</li>
+                  <li>Support more filetypes during upload including <code>FGDB</code>, and <code>GeoJSON</code><span class="red">*</span></li>
               </ul>
 
               <p>GeoNode plugins</p>
@@ -469,7 +533,7 @@ function helloWorld(world) {
   <slide class="thank-you-slide segue nobackground">
     <aside class="gdbar right"><img src="images/rogue_logo.png"></aside>
     <article class="flexbox vleft auto-fadein">
-      <h2>&lt;Thank You!&gt;</h2>
+      <h2>Thank you!</h2>
       <p>Important contact information goes here.</p>
     </article>
     <p class="auto-fadein" data-config-contact>

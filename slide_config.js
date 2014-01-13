@@ -25,7 +25,7 @@ var SLIDE_CONFIG = {
     name: 'Tyler Garner',
     company: 'Geospatial Analyst and Web Developer<br>LMN Solutions',
     twitter: '@garnertb',
-    www: 'http://www.lmnsolutions.com',
+    www: 'http://www.lmnsolutions.com, http://rogue-jctd.github.io/',
     github: 'http://github.com/garnertb'
   }/*, {
     name: 'Second Name',
