@@ -115,7 +115,25 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
       <hgroup>
-          <h2>Arbiter</h2>
+          <h2>ROGUE-GeoNode</h2>
+      </hgroup>
+      <article class="smaller">
+          <img src="images/geogit_history_tab.png" style="float: right; margin-top:-70px">
+          <ul>
+              <li>Follows the GeoNode-project construct</li>
+              <li>Overrides 20 GeoNode templates</li>
+              <li>Adds 2 extra views</li>
+          </ul>
+          <br/>
+          <br/>
+          <br/>
+          <h5><a href="https://github.com/ROGUE-JCTD/rogue_geonode">View on Github</a></h5>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>Arbiter<img style="float:right;" src="images/arbiter.png"/></h2>
       </hgroup>
       <article>
           <ul>
@@ -125,6 +143,7 @@ URL: https://code.google.com/p/io-2012-slides
               <li>Cache basemap tiles</li>
               <li>Supports disconnected editing</li>
           </ul>
+          
           <br/>
           <br/>
           <br/>
@@ -132,16 +151,19 @@ URL: https://code.google.com/p/io-2012-slides
       </article>
   </slide>
 
+  <slide class="fill nobackground" style="background-image: url(images/arbiter_syncing.png)">
+      <footer class="source white">Syncing operation in Arbiter</footer>
+  </slide>
+
   <slide>
       <hgroup>
           <h2>GeoGit</h2>
       </hgroup>
-      <article class="smaller">
+      <article>
           <ul>
-              <li>Import feature data</li>
-              <li>Commit changes</li>
-              <li>Branch and merge</li>
-              <li>Supports most Git commands: <code>add, apply, blame, branch, checkout, cherry-pick, clean, clone, commit, config, conflicts, diff, fetch, format-patch, geojson, help, init, log, ls, merge, oracle, osm, pg, pull, push, rebase, remote, reset, revert, rm, show, shp, sl, sqlserver, squash, status, tag, version</code></li>
+              <li>Most feature data in ROGUE is stored in GeoGit datastores</li>
+              <li>Client side functionality interacts with geogit datastores via a restful service endpoint</li>
+              <li>Supported Git commands: <code>add, apply, blame, branch, checkout, cherry-pick, clean, clone, commit, config, conflicts, diff, fetch, format-patch, geojson, help, init, log, ls, merge, oracle, osm, pg, pull, push, rebase, remote, reset, revert, rm, show, shp, sl, sqlserver, squash, status, tag, version</code></li>
           </ul>
           <br/>
           <br/>
@@ -152,20 +174,32 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
       <hgroup>
-          <h2>ROGUE-GeoNode</h2>
+          <h2>MapLoom</h2>
       </hgroup>
       <article class="smaller">
           <ul>
-              <li>Import feature data</li>
-              <li>Commit changes</li>
-              <li>Branch and merge</li>
-              <li>Supports most Git commands: <code>add, apply, blame, branch, checkout, cherry-pick, clean, clone, commit, config, conflicts, diff, fetch, format-patch, geojson, help, init, log, ls, merge, oracle, osm, pg, pull, push, rebase, remote, reset, revert, rm, show, shp, sl, sqlserver, squash, status, tag, version</code></li>
+              <li>Development started in October 2013</li>
+              <li>Custom client-side mapping application</li>
+              <li>Angular, Bootstrap 3, OpenLayers 3</li>
+              <li>Provides a high-level interface for performing GeoGit operations including: Commit, Merge, Sync, Conflict resolution, Log</li>
+              <li>Static files and template tags packaged in a python module (<a href="https://github.com/ROGUE-JCTD/django-maploom">django-maploom</a>) which is updated on every commit to Maploom.</li>
+              <li>Export commit history to </li>
           </ul>
           <br/>
           <br/>
           <br/>
-          <h5><a href="https://github.com/ROGUE-JCTD/GeoGit/tree/SprintRelease">View on Github</a></h5>
+          <h5><a href="https://github.com/ROGUE-JCTD/MapLoom">View on Github</a></h5>
       </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/maploom_overview.png)">
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/conflict_resolution.png)">
+      <footer class="source white">Conflict resolution in MapLoom.</footer>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/history_view.png)">
   </slide>
 
 
@@ -239,7 +273,7 @@ URL: https://code.google.com/p/io-2012-slides
       </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Slide with (Smaller Font)</h2>
     </hgroup>
@@ -255,7 +289,7 @@ URL: https://code.google.com/p/io-2012-slides
     Hidden slides are left out of the presentation.
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Code Slide (with Subtitle Placeholder)</h2>
       <h3>Subtitle Placeholder</h3>
@@ -276,7 +310,7 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Code Slide (Smaller Font)</h2>
     </hgroup>
@@ -310,7 +344,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <aside class="note">
       <section>
         <ul>
@@ -330,7 +364,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <aside class="note">
       <section>
         <ul>
@@ -350,7 +384,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Slide with Image</h2>
     </hgroup>
@@ -360,7 +394,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Slide with Image (Centered horz/vert)</h2>
     </hgroup>
@@ -370,7 +404,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Table Option A</h2>
       <h3>Subtitle Placeholder</h3>
@@ -399,7 +433,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Table Option A (Smaller Text)</h2>
       <h3>Subtitle Placeholder</h3>
@@ -428,7 +462,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Table Option B</h2>
       <h3>Subtitle Placeholder</h3>
@@ -454,7 +488,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Slide Styles</h2>
     </hgroup>
@@ -487,7 +521,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide class="segue dark nobackground">
+  <slide class="segue dark nobackground" hidden>
     <aside class="gdbar"><img src="images/rogue_logo.png"></aside>
     <hgroup class="auto-fadein">
       <h2>Segue Slide</h2>
@@ -495,14 +529,8 @@ function helloWorld(world) {
     </hgroup>
   </slide>
 
-  <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
-    <hgroup>
-      <h2 class="white">Full Image (with Optional Header)</h2>
-    </hgroup>
-    <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
-  </slide>
 
-  <slide class="segue dark quote nobackground">
+  <slide class="segue dark quote nobackground" hidden>
     <aside class="gdbar right bottom"><img src="images/rogue_logo.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <q>
@@ -515,7 +543,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <hgroup>
       <h2>Slide with Iframe</h2>
     </hgroup>
@@ -524,7 +552,7 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
+  <slide hidden>
     <article>
       <iframe data-src="http://www.google.com/doodle4google/resources/history.html"></iframe>
     </article>
@@ -534,7 +562,6 @@ function helloWorld(world) {
     <aside class="gdbar right"><img src="images/rogue_logo.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <h2>Thank you!</h2>
-      <p>Important contact information goes here.</p>
     </article>
     <p class="auto-fadein" data-config-contact>
       <!-- populated from slide_config.json -->
