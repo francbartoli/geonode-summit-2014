@@ -44,48 +44,25 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
       <hgroup>
-          <h2>About the JCTD</h2>
+          <h2>About ROGUE</h2>
       </hgroup>
       <article class="smaller">
-          <p>JCTDs are DoD vehicles that introduce new operational concepts to maturing technologies to solve complex problems.</p>
-          <h3>A team effort, our partners:</h3>
+
+          <p>JCTDs introduce new operational concepts to maturing technologies to solve complex problems.</p>
+
           <img src="images/rogue_logo.png" style="height:250px; float: right;"/>
-          <ul style="width:700px;">
-              <li><b>Boundless & Community:</b> Open Source Transition</li>
-              <li><b>COPECO Honduras:</b> Transition Point</li>
-              <li><b>Dept. of State HIU:</b> Deputy Transition Manager</li>
-              <li><b>MapStory Foundation:</b> Technical Partner</li>
-              <li><b>MARCIMS (USMC):</b> Transition Partner</li>
-              <li><b>NGA:</b> Technical Partner</li>
-              <li><b>OSD DASD (RFO):</b> Oversight Executive</li>
-              <li><b>Pacific Disaster Center:</b> Transition Manager</li>
-              <li><b>USACE ERDC:</b> Technical Manager</li>
-              <li><b>US Southern Command:</b> CoCom Sponsor</li>
-              <li><b>US SOUTHCOM S&T:</b> Operational Manager</li>
+
+          <h3>Challenges in the HA/DR problem set:</h3>
+          <ul>
+              <li>Supporting a wide range of partners, including military, inter-agency, and NGOs</li>
+              <li>Common situational awareness must be provided to all partners</li>
+              <li>Responding organizations both need, and can provide a great deal of information</li>
+              <li>Partners should have direct access to the technology itself</li>
+              <li>Partners are <span class="blue">distributed</span> and sometimes <span class="blue">disconnected</span></li>
           </ul>
-
+          <br/>
+          <p>In short, ROGUE allows organizations to collaboratively develop and analyze geospatial data with traditional and non-traditional partners</p>
       </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>About ROGUE</h2>
-    </hgroup>
-    <article>
-        <blockquote>
-            Allows organizations to collaboratively develop and analyze geospatial data with traditional and non-traditional partners
-        </blockquote>
-
-        <h3>Traditional challenges in the HA/DR arena that ROGUE addresses</h3>
-        <ul>
-            <li>Wide range of partners, including military, inter-agency, NGOs, & nations</li>
-            <li>Common situational awareness of the environment is critical</li>
-            <li>Responding organizations both need, and can provide a great deal of information</li>
-            <li>Partners must have direct access to the technology itself</li>
-            <li>Partners are <span class="blue">distributed</span> and sometimes <span class="blue">disconnected</span></li>
-        </ul>
-
-    </article>
   </slide>
 
   <slide>
@@ -104,9 +81,9 @@ URL: https://code.google.com/p/io-2012-slides
           </ul>
           <h3>Custom components:</h3>
           <ul>
+              <li><b>ROGUE-GeoNode:</b> A lightweight GeoNode-project that overrides a handful of GeoNode templates and adds additional views.</li>
               <li><b>Arbiter:</b> Native Android mobile application</li>
               <li><b>GeoGIT:</b> Distributed and versioned editing</li>
-              <li><b>ROGUE-GeoNode:</b> A lightweight GeoNode-project that overrides a handful of GeoNode templates and adds additional views.</li>
               <li><b>MapLoom:</b> Custom OL3 web mapping client used in GeoNode</li>
           </ul>
 
@@ -162,6 +139,8 @@ URL: https://code.google.com/p/io-2012-slides
       <article>
           <ul>
               <li>Most feature data in ROGUE is stored in GeoGit datastores</li>
+              <li> Multi-user/Multi-organizational collaboration</li>
+              <li>Supports Low bandwidth and disconnected editing</li>
               <li>Client side functionality interacts with geogit datastores via a restful service endpoint</li>
               <li>Supported Git commands: <code>add, apply, blame, branch, checkout, cherry-pick, clean, clone, commit, config, conflicts, diff, fetch, format-patch, geojson, help, init, log, ls, merge, oracle, osm, pg, pull, push, rebase, remote, reset, revert, rm, show, shp, sl, sqlserver, squash, status, tag, version</code></li>
           </ul>
@@ -182,8 +161,9 @@ URL: https://code.google.com/p/io-2012-slides
               <li>Custom client-side mapping application</li>
               <li>Angular, Bootstrap 3, OpenLayers 3</li>
               <li>Provides a high-level interface for performing GeoGit operations including: Commit, Merge, Sync, Conflict resolution, Log</li>
+              <li>Export commit history to a CSV file</li>
               <li>Static files and template tags packaged in a python module (<a href="https://github.com/ROGUE-JCTD/django-maploom">django-maploom</a>) which is updated on every commit to Maploom.</li>
-              <li>Export commit history to </li>
+
           </ul>
           <br/>
           <br/>
@@ -270,6 +250,29 @@ URL: https://code.google.com/p/io-2012-slides
                   <li><b>Geospatial Issue Tracking:</b> Github-like issues with spatial bounds that are related to a map or layer in GeoNode<span class="red">*</span></li>
               </ul>
           </ul>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>JCTD Partners</h2>
+      </hgroup>
+      <article class="smaller">
+          <img src="images/rogue_logo.png" style="height:250px; float: right;"/>
+          <ul style="width:700px;">
+              <li><b>Boundless & Community:</b> Open Source Transition</li>
+              <li><b>COPECO Honduras:</b> Transition Point</li>
+              <li><b>Dept. of State HIU:</b> Deputy Transition Manager</li>
+              <li><b>MapStory Foundation:</b> Technical Partner</li>
+              <li><b>MARCIMS (USMC):</b> Transition Partner</li>
+              <li><b>NGA:</b> Technical Partner</li>
+              <li><b>OSD DASD (RFO):</b> Oversight Executive</li>
+              <li><b>Pacific Disaster Center:</b> Transition Manager</li>
+              <li><b>USACE ERDC:</b> Technical Manager</li>
+              <li><b>US Southern Command:</b> CoCom Sponsor</li>
+              <li><b>US SOUTHCOM S&T:</b> Operational Manager</li>
+          </ul>
+
       </article>
   </slide>
 
